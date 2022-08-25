@@ -18,6 +18,7 @@ from recipe.serializers import (
 )
 
 
+
 RECIPES_URL = reverse('recipe:recipe-list')
 
 
