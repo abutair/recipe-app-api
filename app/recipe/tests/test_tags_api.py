@@ -96,4 +96,3 @@ class PrivateTagsApiTests(TestCase):
         self.assertFalse(tags.exists())
 
 
-
