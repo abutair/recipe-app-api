@@ -3,7 +3,7 @@ Serializers for recipe APIs
 """
 from rest_framework import serializers
 
-from core.models import Recipe,Tag
+from core.models import Recipe, Tag
 
 
 class TagSerializer(serializers.ModelSerializer):
@@ -42,7 +42,7 @@ class RecipeSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         """Update recipe."""
-        tags = validated_data.pop('tags',None)
+        tags = validated_data.pop('tags', None)
         if tags is not None:
             instance.tags.clear()
             self._get_or_create_tags(tags, instance)
